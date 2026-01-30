@@ -1,6 +1,6 @@
-@import "./base/reset.css";
-@import "./base/variables.css";
-
-@import "./sections/slogan-block.css";
-@import "./sections/information-block.css";
-@import "./sections/bottom-info-block.css";
+@import url("./base/reset.css");
+@import url("./base/global.css");
+@import url("./base/variables.css");
+@import url("./sections/slogan-block.css");
+@import url("./sections/information-block.css");
+@import url("./sections/bottom-info-block.css");

@@ -1,0 +1,117 @@
+.slogan-block {
+    background-image: linear-gradient(135deg,
+        rgb(2 0 17 / 76%) 0%,
+        rgb(23 31 65 / 57%) 39%,
+        rgb(21 31 66 / 51%) 49%,
+        rgb(21 34 74 / 60%) 59%,
+        rgb(0 10 31 / 80%) 100%
+    );
+    height: 800px;
+    font-family: var(--main-font);
+    color: var(--text-bright);
+}
+
+.slogan-header-block__nav-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px 20px 80px;
+}
+
+.nav-logo__img {
+    width: 114px;
+    height: 24px;
+}
+
+.nav-info-block {
+    width: 416px;
+    height: 24px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-info-block__link {
+    color: var(--text-bright);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.nav-button-block__button {
+    width: 152px;
+    height: 56px;
+    font-family: var(--sub-font);
+    font-size: 14px;
+    color: var(--text-bright);
+    background: none;
+    border: solid #777F96 1.5px;
+    border-radius: 4px;
+}
+
+.slogan-main-block {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slogan-main-block__main-words {
+    font-size: 62px;
+    width: 640px;
+    text-align: center;
+}
+
+.slogan-main-block__sub-words {
+    font-family: var(--sub-font);
+    font-size: 18px;
+    font-weight: 300;
+    width: 450px;
+    text-align: center;
+}
+
+.slogan-search-panel {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    width: 746px;
+}
+
+.slogan-search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    width: 574px;
+    height: 74px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.slogan-search-destination-input {
+    border: none;
+    width: 150px;
+    font-family: var(--sub-font);
+    color: #AFAEB4;
+}
+
+.slogan-search-location-input {
+    border: none;
+    width: 100px;
+    font-family: var(--sub-font);
+    color: #AFAEB4;
+}
+
+.slogan-people-dropdown-button {
+    border: none;
+    background: none;
+    color: #AFAEB4;
+}
+
+.slogan-search-panel__search-button {
+    width: 152px;
+    border: none;
+    font-family: var(--sub-font);
+    background-color: #34A5E4;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+}

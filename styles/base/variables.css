@@ -1,4 +1,6 @@
 :root {
     --text-dark: #5C6272;
     --text-bright: #FFF;
+    --main-font: "Poppins", sans-serif;
+    --sub-font: "Inter", sans-serif;
 }
