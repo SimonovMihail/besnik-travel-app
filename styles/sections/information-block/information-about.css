@@ -1,0 +1,111 @@
+.information-about-block {
+    display: flex;
+    flex-direction: column;
+    margin: 0 140px;
+    gap: 60px;
+}
+
+.information-about-text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.information-about-text-container-left__purple-text {
+    font-size: 16px;
+    color: var(--text-purple-title);
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+.information-about-text-container-left__main-words {
+    font-size: 40px;
+    color: var(--text-dark-title-2);
+    width: 430px;
+    line-height: 50px;
+    margin: 0;
+}
+
+.information-about-text-container-right {
+    width: 472px;
+}
+
+.information-about-text-container-right__words {
+    font-size: 16px;
+    color: var(--text-dark);
+    font-weight: 300;
+}
+
+.information-about-card-container {
+    display: flex;
+    gap: 30px;
+}
+
+.information-about-card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.information-about-card__quote-icon {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 255px;
+}
+
+.information-about-card__img {
+    width: 540px;
+    height: 290px;
+}
+
+.information-about-card-text-container {
+    background-color: #fff;
+    padding: 60px 40px 40px 40px;
+}
+
+.information-about-card-text-container__main-words {
+    margin: 0;
+    color: var(--text-dark-title-2);
+    font-size: 30px;
+}
+
+.information-about-card-text-container__sub-words {
+    margin: 0;
+    color: var(--text-dark);
+    width: 457px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.information-about-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.information-about-buttons__wrap {
+    display: flex;
+    gap: 10px;
+}
+
+.information-about-buttons__button-left {
+    margin: 0;
+    padding: 0;
+    border: solid #EDEEEF 1px;
+    background: #fff;
+    width: 61px;
+    height: 61px;
+    border-radius: 30px;
+}
+
+.information-about-buttons__button-right {
+    margin: 0;
+    padding: 0;
+    border: solid #EDEEEF 1px;
+    background: #fff;
+    width: 61px;
+    height: 61px;
+    border-radius: 30px;
+}

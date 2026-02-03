@@ -2,5 +2,11 @@
 @import url("./base/global.css");
 @import url("./base/variables.css");
 @import url("./sections/slogan-block.css");
-@import url("./sections/information-block.css");
+@import url("./sections/information-block/information-global.css");
+@import url("./sections/information-block/information-pros.css");
+@import url("./sections/information-block/information-about.css");
+@import url("./sections/information-block/information-places.css");
+@import url("./sections/information-block/information-partner.css");
+@import url("./sections/information-block/information-cities.css");
+@import url("./sections/information-block/information-reviews.css");
 @import url("./sections/bottom-info-block.css");
