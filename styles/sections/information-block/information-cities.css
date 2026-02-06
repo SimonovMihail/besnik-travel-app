@@ -1,0 +1,103 @@
+.information-cities-block {
+    display: flex;
+    flex-direction: column;
+    margin: 0 140px;
+    gap: 60px;
+    align-items: center;
+}
+
+.information-cities-text-button-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.information-cities-text-container__purple-text {
+    font-size: 16px;
+    color: var(--text-purple-title);
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+.information-cities-text-container__main-words {
+    font-size: 40px;
+    color: var(--text-dark-title-2);
+    width: 430px;
+    line-height: 50px;
+    margin: 0;
+}
+
+.information-cities-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.information-cities-buttons__wrap {
+    display: flex;
+    gap: 10px;
+}
+
+.information-cities-buttons__button-left {
+    margin: 0;
+    padding: 0;
+    border: solid #EDEEEF 1px;
+    background: #fff;
+    width: 61px;
+    height: 61px;
+    border-radius: 30px;
+}
+
+.information-cities-buttons__button-right {
+    margin: 0;
+    padding: 0;
+    border: solid #EDEEEF 1px;
+    background: #fff;
+    width: 61px;
+    height: 61px;
+    border-radius: 30px;
+}
+
+.information-cities-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.information-cities-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: linear-gradient(170deg,
+        rgb(2 0 14 / 13%) 0%,
+        rgb(42 34 101 / 0%) 45%,
+        rgb(15 11 44 / 60%) 100%
+    );
+    height: 495px;
+    width: 364px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.information-cities-card-country-container {
+    padding: 10px 25px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    width: max-content;
+}
+
+.information-cities-card-country-container__main-words {
+    color: #E9EBF3;
+    font-size: 20px;
+}
+
+.information-cities-card-text-container {
+    color: var(--text-bright);
+}
+
+.information-cities-card-text-container__main-words {
+    margin: 0;
+    font-size: 34px;
+    text-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}

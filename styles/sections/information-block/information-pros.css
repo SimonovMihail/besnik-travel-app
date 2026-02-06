@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 960px;
+    gap: 35px;
 }
 
 .information-pros-card {

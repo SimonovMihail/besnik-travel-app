@@ -1,0 +1,63 @@
+.information-places-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.information-places-block__main-words {
+    font-size: 45px;
+    color: var(--text-dark-title-1);
+    text-align: center;
+}
+
+.information-places-block__sub-words {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    width: 530px;
+}
+
+.information-places-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.information-places-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.information-places-card__main-words {
+    font-size: 24px;
+    color: var(--text-dark-title-1);
+    margin: 20px 0 15px 0;
+}
+
+.information-places-card-text-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.information-places-card-text-container__time-text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.information-places-card__img-container {
+    width: 250px;
+    height: 263px;
+    border-radius: 12px;
+    background-image: linear-gradient(135deg,
+        rgb(13 9 45 / 40%) 0%,
+        rgb(15 11 44 / 0%) 94%,
+        rgb(15 11 44 / 10%) 100%
+    );
+}
+
+.information-places-card-text-container__price-text {
+    color: #EE6D52;
+}
