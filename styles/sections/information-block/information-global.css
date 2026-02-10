@@ -6,4 +6,5 @@
     color: var(--text-dark);
     background-color: #F5F6F8;
     padding-top: 140px; /* вместо маргина для первой секции т.к. бекграунд привяжется к заголовку и поедет с ним */
+    padding-bottom: 250px;
 }
