@@ -1,0 +1,108 @@
+.information-reviews-block {
+    display: flex;
+    flex-direction: column;
+    margin: 0 140px;
+    gap: 60px;
+    align-items: center;
+}
+
+.information-reviews-text-button-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.information-reviews-text-container-left__purple-text {
+    font-size: 16px;
+    color: var(--text-purple-title);
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+.information-reviews-text-container-left__main-words {
+    font-size: 40px;
+    color: var(--text-dark-title-2);
+    width: 430px;
+    line-height: 50px;
+    margin: 0;
+}
+
+.information-reviews-text-container-left__sub-words {
+    font-size: 16px;
+    color: var(--text-dark);
+    width: 350px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.information-reviews-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.information-reviews-buttons__wrap {
+    display: flex;
+    gap: 10px;
+}
+
+.information-reviews-buttons__button-left {
+    margin: 0;
+    padding: 0;
+    border: solid #EDEEEF 1px;
+    background: #fff;
+    width: 61px;
+    height: 61px;
+    border-radius: 30px;
+}
+
+.information-reviews-buttons__button-right {
+    margin: 0;
+    padding: 0;
+    border: solid #EDEEEF 1px;
+    background: #fff;
+    width: 61px;
+    height: 61px;
+    border-radius: 30px;
+}
+
+.information-reviews-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.information-reviews-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.information-reviews-card-text-container {
+    text-align: center;
+}
+
+.information-reviews-card-text-container__main-words {
+    margin: 50px 0 0;
+    font-size: 20px;
+    color: var(--text-dark-title-2);
+}
+
+.information-reviews-card-text-container__sub-words {
+    margin: 0;
+    font-size: 14px;
+    color: #6D7487;
+    font-weight: 300;
+}
+
+.information-reviews-card__rating {
+    margin-top: 10px;
+}
+
+.information-reviews-card__review-text {
+    width: 235px;
+}
