@@ -1,0 +1,62 @@
+@media (width <= 1000px) {
+    /* Механизм для корректно работающего скролла с перекрытием тенями контента (обёрта, псевдоэлемент и сам контейнер) */
+    .information-pros-card-container-wrap {
+        position: relative;
+        overflow: hidden;
+        max-width: 334px;
+        border-radius: 8px;
+        padding: 0;
+    }
+
+    .information-pros-card-container-wrap::after { /* Он нам и будет давать тень и круглую рамку. */
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 8px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12),
+        inset 0 1px 2px rgba(0, 0, 0, 0.24);
+        z-index: 5;
+        pointer-events: none;
+    }
+
+    .information-pros-card-container {
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: scroll;
+        padding: 20px;
+    }
+
+    /* ДЛЯ БУДУЩЕЙ ОТЛАДКИ НЕКОТОРЫХ ПРОБЛЕМНЫХ БЛОКОВ */
+
+    /*.information-about-block {*/
+    /*    display: none;*/
+    /*}*/
+
+    /*.information-partner-block {*/
+    /*    display: none;*/
+    /*}*/
+
+    /*.information-places-block {*/
+    /*    display: none;*/
+    /*}*/
+
+    /*.information-cities-block {*/
+    /*    display: none;*/
+    /*}*/
+
+    /*.information-reviews-block {*/
+    /*    display: none;*/
+    /*}*/
+
+    /*.bottom-info-block {*/
+    /*    display: none;*/
+    /*}*/
+}
+
+@media (width <= 670px) {
+    .information-pros-block__sub-words {
+        width: auto;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}

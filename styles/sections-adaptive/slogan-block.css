@@ -61,6 +61,27 @@
     .slogan-main-block__sub-words {
         font-size: 16px;
     }
+
+    .slogan-search-bar {
+        justify-content: space-around;
+        width: 300px;
+    }
+
+    .slogan-search-bar__bigger-divider {
+        display: none;
+    }
+
+    .slogan-search-bar__location-icon {
+        display: none;
+    }
+
+    .slogan-search-bar__location-input-wrap {
+        display: none;
+    }
+
+    .slogan-search-bar__people-dropdown-menu {
+        display: none;
+    }
 }
 
 @media (width <= 520px) {
