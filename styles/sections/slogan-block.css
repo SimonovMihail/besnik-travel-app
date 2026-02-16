@@ -16,6 +16,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px 20px 80px;
+    gap: 10px;
 }
 
 .nav-logo__img {
@@ -28,6 +29,8 @@
     height: 24px;
     display: flex;
     justify-content: space-around;
+    gap: 10px;
+    text-align: center;
 }
 
 .nav-info-block__link {
@@ -45,6 +48,10 @@
     background: none;
     border: solid #777F96 1.5px;
     border-radius: 4px;
+}
+
+.nav-burger-button {
+    display: none;
 }
 
 .slogan-main-block {
