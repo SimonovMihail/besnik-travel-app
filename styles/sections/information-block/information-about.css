@@ -3,12 +3,15 @@
     flex-direction: column;
     margin: 0 140px;
     gap: 60px;
+    align-items: center;
 }
 
 .information-about-text-container {
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: space-around;
     align-items: center;
+    gap: 50px;
 }
 
 .information-about-text-container-left__purple-text {
@@ -47,6 +50,8 @@
     flex-direction: column;
     overflow: hidden;
     border-radius: 12px;
+    width: 540px;
+    flex-shrink: 0;
 }
 
 .information-about-card__quote-icon {
@@ -75,7 +80,6 @@
 .information-about-card-text-container__sub-words {
     margin: 0;
     color: var(--text-dark);
-    width: 457px;
     font-size: 16px;
     font-weight: 300;
 }

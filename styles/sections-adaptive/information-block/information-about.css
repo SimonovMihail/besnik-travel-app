@@ -1,0 +1,93 @@
+@media (width <= 1232px) {
+    .information-about-text-container-left__main-words {
+        width: 100%;
+    }
+}
+
+@media (width <= 1155px) {
+    .information-about-card-container-wrap {
+        position: relative;
+        overflow: hidden;
+        width: 580px;
+        border-radius: 8px;
+        padding: 0;
+    }
+
+    .information-about-card-container-wrap::after { /* Он нам и будет давать тень и круглую рамку. */
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 8px;
+        /*box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12),*/
+        /*inset 0 1px 2px rgba(0, 0, 0, 0.24);*/
+        background: linear-gradient(to right, transparent 98%, #F5F6F8 100%), linear-gradient(to left, transparent 98%, #F5F6F8 100%);
+        z-index: 5;
+        pointer-events: none;
+    }
+
+    .information-about-card-container {
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: scroll;
+        padding: 20px;
+    }
+}
+
+@media (width <= 1000px) {
+    .information-about-block {
+        margin: 0;
+        gap: 20px;
+    }
+
+    .information-about-text-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .information-about-text-container-right__words {
+        margin: 0;
+    }
+
+    .information-about-text-container-left__main-words {
+        width: auto;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+@media (width <= 570px) {
+    /*.information-about-text-container-left__main-words {*/
+    /*    max-width: 400px;*/
+    /*}*/
+
+    .information-about-text-container-right {
+        width: auto;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .information-about-card-container-wrap {
+        width: 340px;
+    }
+
+    .information-about-card {
+        width: 300px;
+    }
+}
+
+@media (width <= 425px) {
+    .information-about-text-container-left__main-words {
+        font-size: 30px;
+    }
+}
+
+@media (width <= 330px) {
+    .information-about-card-container-wrap {
+        width: 280px;
+    }
+
+    .information-about-card {
+        width: 240px;
+    }
+}

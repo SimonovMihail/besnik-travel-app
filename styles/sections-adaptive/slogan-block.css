@@ -2,6 +2,7 @@
     .slogan-search-panel {
         flex-direction: column;
         align-items: center;
+        width: 100%;
         gap: 20px;
     }
 
@@ -99,5 +100,12 @@
     .slogan-main-block__sub-words {
         width: auto;
         margin: 0 40px;
+    }
+}
+
+@media (width <= 320px) {
+    .slogan-search-bar {
+        width: 250px;
+        padding: 0 10px;
     }
 }

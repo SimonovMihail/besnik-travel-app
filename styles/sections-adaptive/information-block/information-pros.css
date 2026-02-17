@@ -25,32 +25,6 @@
         overflow-x: scroll;
         padding: 20px;
     }
-
-    /* ДЛЯ БУДУЩЕЙ ОТЛАДКИ НЕКОТОРЫХ ПРОБЛЕМНЫХ БЛОКОВ */
-
-    /*.information-about-block {*/
-    /*    display: none;*/
-    /*}*/
-
-    /*.information-partner-block {*/
-    /*    display: none;*/
-    /*}*/
-
-    /*.information-places-block {*/
-    /*    display: none;*/
-    /*}*/
-
-    /*.information-cities-block {*/
-    /*    display: none;*/
-    /*}*/
-
-    /*.information-reviews-block {*/
-    /*    display: none;*/
-    /*}*/
-
-    /*.bottom-info-block {*/
-    /*    display: none;*/
-    /*}*/
 }
 
 @media (width <= 670px) {
