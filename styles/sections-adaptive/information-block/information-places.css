@@ -1,0 +1,53 @@
+@media (width <= 1285px) {
+    .information-places-card-container-wrap {
+        position: relative;
+        overflow: hidden;
+        width: 970px;
+        border-radius: 8px;
+        padding: 0;
+    }
+
+    .information-places-card-container-wrap::after { /* Он нам и будет давать тень и круглую рамку. */
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 8px;
+        background: linear-gradient(to right, transparent 98%, #F5F6F8 100%), linear-gradient(to left, transparent 98%, #F5F6F8 100%);
+        z-index: 5;
+        pointer-events: none;
+    }
+
+    .information-places-card-container {
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: scroll;
+        padding: 20px;
+    }
+
+    .information-places-buttons {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media (width <= 965px) {
+    .information-places-card-container-wrap {
+        width: 650px;
+    }
+}
+
+@media (width <= 645px) {
+    .information-places-block__main-words {
+        width: 100%;
+    }
+
+    .information-places-block__sub-words {
+        width: auto;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .information-places-card-container-wrap {
+        width: 330px;
+    }
+}
