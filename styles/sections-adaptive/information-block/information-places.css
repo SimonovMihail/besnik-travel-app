@@ -51,3 +51,21 @@
         width: 330px;
     }
 }
+
+@media (width <= 350px) {
+    .information-places-card-container-wrap {
+        width: 280px;
+    }
+
+    .information-places-card {
+        width: 240px;
+    }
+
+    .information-places-card-text-container {
+        align-items: center;
+    }
+
+    .information-places-card__img-container {
+        width: 200px;
+    }
+}

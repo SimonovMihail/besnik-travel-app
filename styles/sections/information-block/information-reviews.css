@@ -1,7 +1,6 @@
 .information-reviews-block {
     display: flex;
     flex-direction: column;
-    margin: 0 140px;
     gap: 60px;
     align-items: center;
 }

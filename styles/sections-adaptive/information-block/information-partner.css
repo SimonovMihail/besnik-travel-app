@@ -1,0 +1,13 @@
+@media (width <= 550px) {
+    .information-partner-block__main-words {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .information-partner-block__sub-words {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
