@@ -21,3 +21,14 @@
 @import url("./sections-adaptive/information-block/information-cities.css");
 @import url("./sections-adaptive/information-block/information-reviews.css");
 @import url("./sections-adaptive/bottom-info-block.css");
+
+/* Анимации и прочее */
+@import url("./sections-animations/slogan-block.css");
+@import url("./sections-animations/information-block/information-global.css");
+@import url("./sections-animations/information-block/information-pros.css");
+@import url("./sections-animations/information-block/information-about.css");
+@import url("./sections-animations/information-block/information-places.css");
+@import url("./sections-animations/information-block/information-partner.css");
+@import url("./sections-animations/information-block/information-cities.css");
+@import url("./sections-animations/information-block/information-reviews.css");
+@import url("./sections-animations/bottom-info-block.css");
