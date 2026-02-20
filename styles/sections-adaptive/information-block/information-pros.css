@@ -3,7 +3,7 @@
     .information-pros-card-container-wrap {
         position: relative;
         overflow: hidden;
-        width: 334px;
+        width: 663px;
         border-radius: 8px;
         padding: 0;
     }
@@ -23,6 +23,12 @@
         box-sizing: border-box;
         overflow-x: scroll;
         padding: 20px;
+    }
+}
+
+@media (width <= 663px) {
+    .information-pros-card-container-wrap {
+        width: 334px;
     }
 }
 

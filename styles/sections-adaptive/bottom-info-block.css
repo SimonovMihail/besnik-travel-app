@@ -1,0 +1,134 @@
+@media (width <= 1205px) {
+    .bottom-info-blue-container {
+        gap: 70px;
+    }
+}
+
+@media (width <= 1125px) {
+    .bottom-info-blue-container {
+        gap: 20px;
+    }
+}
+
+@media (width <= 1085px) {
+    .bottom-info-blue-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 40px 70px;
+        gap: 40px;
+        top: -155px;
+    }
+}
+
+@media (width <= 945px) {
+    .bottom-info-text-container {
+        gap: 20px;
+        margin: 0 20px;
+    }
+}
+
+@media (width <= 785px) {
+    .bottom-info-block {
+        padding-bottom: 30px;
+    }
+
+    .bottom-info-text-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bottom-info-text-container__left {
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .bottom-info-text {
+        width: 100%;
+    }
+
+    .bottom-info-text-container__middle {
+        gap: 10px;
+    }
+
+    .bottom-info-text-container__right {
+        gap: 5px;
+    }
+}
+
+@media (width <= 640px) {
+    .bottom-info-blue-email-input-container__input-label {
+        gap: 25px;
+    }
+}
+
+@media (width <= 570px) {
+    .bottom-info-blue-container {
+        padding: 40px 40px;
+    }
+
+    .bottom-info-blue-email-input-container__input-label {
+        gap: 5px;
+    }
+}
+
+@media (width <= 500px) {
+    .bottom-info-blue-container {
+        padding: 20px 20px;
+        gap: 20px;
+    }
+
+    .bottom-info-blue-text-container__main-words {
+        font-size: 30px;
+    }
+
+    .bottom-info-blue-text-container__sub-words {
+        font-size: 14px;
+    }
+}
+
+@media (width <= 450px) {
+    .bottom-info-blue-email-input-container__input-label {
+        flex-direction: column;
+    }
+
+    .bottom-info-blue-email-input-container__button {
+        width: 100%;
+    }
+
+    .bottom-info-blue-email-input-container__input {
+        padding: 18px 5px;
+    }
+
+    .bottom-info-blue-text-container__main-words {
+        width: 100%;
+    }
+
+    .bottom-info-blue-text-container__sub-words {
+        width: 100%;
+    }
+
+    .bottom-info-blue-container {
+        width: calc(100% - 40px);
+    }
+}
+
+@media (width <= 340px) {
+    .bottom-info-text-container__middle {
+        grid-template-columns: 115px;
+    }
+}
+
+@media (width <= 320px) {
+    .bottom-info-blue-email-input-container {
+        width: 100%;
+    }
+}
+
+@media (width <= 301px) {
+    .bottom-info-block {
+        padding-top: 230px;
+    }
+}
