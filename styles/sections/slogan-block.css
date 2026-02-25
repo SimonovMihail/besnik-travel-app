@@ -34,6 +34,7 @@
 }
 
 .nav-info-block__link {
+    position: relative;
     color: var(--text-bright);
     font-size: 14px;
     text-decoration: none;
@@ -96,6 +97,7 @@
 .slogan-search-destination-input {
     border: none;
     width: 150px;
+    padding: 10px 5px;
     font-family: var(--sub-font);
     color: #AFAEB4;
 }
@@ -103,6 +105,7 @@
 .slogan-search-location-input {
     border: none;
     width: 100px;
+    padding: 10px 5px;
     font-family: var(--sub-font);
     color: #AFAEB4;
 }

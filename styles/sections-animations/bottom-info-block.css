@@ -1,0 +1,28 @@
+.bottom-info-blue-email-input-container__button:hover {
+    transition: background-color 0.1s ease-in-out;
+    background-color: #0d3950;
+}
+
+.bottom-info-blue-email-input-container__button:active {
+    background-color: #0b3042;
+}
+
+.bottom-info-blue-email-input-container__input:hover::placeholder {
+    transition: color 0.2s ease-in-out;
+    color: black;
+}
+
+.bottom-info-blue-email-input-container__input:focus::placeholder {
+    transition: color 0.2s ease-in-out;
+    color: black;
+}
+
+.bottom-info-blue-email-input-container__input:hover {
+    transition: color 0.2s ease-in-out;
+    color: black;
+}
+
+.bottom-info-blue-email-input-container__input:focus {
+    transition: color 0.2s ease-in-out;
+    color: black;
+}

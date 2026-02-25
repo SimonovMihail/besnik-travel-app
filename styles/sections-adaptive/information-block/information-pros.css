@@ -24,6 +24,11 @@
         overflow-x: scroll;
         padding: 20px;
     }
+
+    .information-pros-buttons {
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
 @media (width <= 663px) {

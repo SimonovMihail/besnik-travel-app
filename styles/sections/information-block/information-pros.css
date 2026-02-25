@@ -57,3 +57,28 @@
     width: 254px;
     font-size: 16px;
 }
+
+.information-pros-buttons {
+    display: none;
+    margin-top: 20px;
+}
+
+.information-pros-buttons__button-left {
+    margin: 0;
+    padding: 0;
+    border: solid #EDEEEF 1px;
+    background: #fff;
+    width: 61px;
+    height: 61px;
+    border-radius: 30px;
+}
+
+.information-pros-buttons__button-right {
+    margin: 0;
+    padding: 0;
+    border: solid #EDEEEF 1px;
+    background: #fff;
+    width: 61px;
+    height: 61px;
+    border-radius: 30px;
+}

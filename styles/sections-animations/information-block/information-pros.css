@@ -1,0 +1,17 @@
+.information-pros-buttons__button-left:hover {
+    transition: background-color 0.1s ease-in-out;
+    background-color: #ededed;
+}
+
+.information-pros-buttons__button-left:active {
+    background-color: #d8d8d8;
+}
+
+.information-pros-buttons__button-right:hover {
+    transition: background-color 0.1s ease-in-out;
+    background-color: #ededed;
+}
+
+.information-pros-buttons__button-right:active {
+    background-color: #d8d8d8;
+}
