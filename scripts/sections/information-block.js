@@ -1,3 +1,34 @@
+export function initProsSlider () {
+    const prosSliderContainer = document.querySelector('[data-js-pros-slider-container]');
+
+    if (!prosSliderContainer) return;
+
+    const prosSliderPrevButton = document.querySelector('[data-js-pros-slider-button-prev]');
+    const prosSliderNextButton = document.querySelector('[data-js-pros-slider-button-next]');
+
+    const getScrollStep = () => {
+        const card = prosSliderContainer.querySelector('[data-js-pros-slider-card]');
+        const containerStyles = window.getComputedStyle(prosSliderContainer);
+        const gap = parseInt(containerStyles.columnGap);
+
+        return card.offsetWidth + gap;
+    }
+
+    prosSliderPrevButton.addEventListener('click', () => {
+        prosSliderContainer.scrollBy({
+            left: -getScrollStep(),
+            behavior: "smooth",
+        })
+    })
+
+    prosSliderNextButton.addEventListener('click', () => {
+        prosSliderContainer.scrollBy({
+            left: getScrollStep(),
+            behavior: "smooth",
+        })
+    })
+}
+
 export function initAboutSlider () {
     const aboutSliderContainer = document.querySelector('[data-js-about-slider-container]');
 

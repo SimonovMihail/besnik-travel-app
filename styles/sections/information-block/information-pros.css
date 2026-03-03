@@ -19,9 +19,14 @@
 
 .information-pros-card-container {
     display: flex;
+    scrollbar-width: none; /* чтобы скролл не было видно */
     align-items: center;
     justify-content: space-between;
     gap: 35px;
+}
+
+.information-pros-card-container-wrap::-webkit-scrollbar {
+    display: none; /* чтобы скролл не было видно */
 }
 
 .information-pros-card {
