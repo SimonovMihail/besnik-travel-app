@@ -111,6 +111,7 @@
 }
 
 .slogan-people-dropdown-button {
+    position: relative;
     border: none;
     background: none;
     color: #AFAEB4;
@@ -124,4 +125,30 @@
     color: #fff;
     font-size: 16px;
     border-radius: 4px;
+}
+
+.people-dropdown {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    list-style-type: none;
+    left: -10px;
+    gap: 5px;
+    margin: 0;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.people-dropdown__item-button {
+    width: 100px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 5px 10px;
+    border: none;
+}
+
+.people-dropdown__item-button:hover {
+    background-color: #ececec;
 }

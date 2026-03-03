@@ -23,7 +23,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    scrollbar-width: none; /* чтобы скролл не было видно */
     gap: 30px;
+}
+
+.information-places-card-container-wrap::-webkit-scrollbar {
+    display: none; /* чтобы скролл не было видно */
 }
 
 .information-places-card {

@@ -84,7 +84,10 @@
     color: black;
 }
 
-.slogan-people-dropdown-button:focus {
-    transition: color 0.2s ease-in-out;
+.slogan-people-dropdown-button.is-clicked {
     color: black;
+}
+
+.slogan-down-arrow-icon.is-clicked {
+    transform: rotate(180deg);
 }

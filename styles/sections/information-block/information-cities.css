@@ -59,9 +59,14 @@
 
 .information-cities-card-container {
     display: flex;
+    scrollbar-width: none; /* чтобы скролл не было видно */
     align-items: center;
     justify-content: space-between;
     gap: 30px;
+}
+
+.information-cities-card-container-wrap::-webkit-scrollbar {
+    display: none; /* чтобы скролл не было видно */
 }
 
 .information-cities-card {

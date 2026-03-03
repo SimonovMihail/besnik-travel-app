@@ -41,7 +41,12 @@
 
 .information-about-card-container {
     display: flex;
+    scrollbar-width: none; /* чтобы скролл не было видно */
     gap: 30px;
+}
+
+.information-about-card-container-wrap::-webkit-scrollbar {
+    display: none; /* чтобы скролл не было видно */
 }
 
 .information-about-card {

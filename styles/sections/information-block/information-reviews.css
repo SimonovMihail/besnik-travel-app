@@ -67,9 +67,14 @@
 
 .information-reviews-card-container {
     display: flex;
+    scrollbar-width: none; /* чтобы скролл не было видно */
     align-items: center;
     justify-content: space-between;
     gap: 30px;
+}
+
+.information-reviews-card-container-wrap::-webkit-scrollbar {
+    display: none; /* чтобы скролл не было видно */
 }
 
 .information-reviews-card {

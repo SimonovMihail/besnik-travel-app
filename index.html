@@ -70,7 +70,7 @@
                 </svg>
                 <div class="slogan-search-bar__people-dropdown-menu" data-js-slogan-people-dropdown-menu>
                     <button class="slogan-people-dropdown-button" data-js-slogan-people-dropdown-menu-button>2 Person</button>
-                    <svg class="slogan-down-arrow-icon" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="slogan-down-arrow-icon" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg" data-js-slogan-people-dropdown-menu-arrow>
                         <path d="M0 2.25L4.50002 6.75002L9 2.25H0Z" fill="#BCBCBC"/>
                     </svg>
                 </div>
@@ -136,8 +136,8 @@
             </div>
         </div>
         <div class="information-about-card-container-wrap">
-            <div class="information-about-card-container"> <!-- todo: потом добавишь сюда больше карт через js -->
-                <div class="information-about-card">
+            <div class="information-about-card-container" data-js-about-slider-container> <!-- todo: потом добавишь сюда больше карт через js -->
+                <div class="information-about-card" data-js-about-slider-card>
                     <img src="./images/about-card-images/quote-icon.png" alt="quote" class="information-about-card__quote-icon">
                     <img src="./images/about-card-images/img1.jpg" alt="Nanjing, China" class="information-about-card__img">
                     <div class="information-about-card-text-container">
@@ -145,7 +145,7 @@
                         <h5 class="information-about-card-text-container__sub-words">These exercises ran in parallel with a series of focus groups comprising of parents. These exercises ran in parallel with a series.</h5>
                     </div>
                 </div>
-                <div class="information-about-card">
+                <div class="information-about-card" data-js-about-slider-card>
                     <img src="./images/about-card-images/quote-icon.png" alt="quote" class="information-about-card__quote-icon">
                     <img src="./images/about-card-images/img2.jpg" alt="Tyumen, Russia" class="information-about-card__img">
                     <div class="information-about-card-text-container">
@@ -157,12 +157,12 @@
         </div>
         <div class="information-about-buttons">
             <div class="information-about-buttons__wrap">
-                <button class="information-about-buttons__button-left" type="button">
+                <button class="information-about-buttons__button-left" type="button" data-js-about-slider-button-prev>
                     <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M4.99264 10.8262L0.21967 6.05326C-0.0732231 5.76036 -0.0732231 5.28549 0.21967 4.9926L4.99264 0.219626C5.28553 -0.073267 5.76041 -0.073267 6.0533 0.219626C6.34619 0.51252 6.34619 0.987393 6.0533 1.28029L2.56066 4.77293H13.75C14.1642 4.77293 14.5 5.10871 14.5 5.52293C14.5 5.93714 14.1642 6.27293 13.75 6.27293H2.56066L6.0533 9.76557C6.34619 10.0585 6.34619 10.5333 6.0533 10.8262C5.76041 11.1191 5.28553 11.1191 4.99264 10.8262Z" fill="#152137"/>
                     </svg>
                 </button>
-                <button class="information-about-buttons__button-right" type="button">
+                <button class="information-about-buttons__button-right" type="button" data-js-about-slider-button-next>
                     <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M9.50736 10.8262L14.2803 6.05326C14.5732 5.76036 14.5732 5.28549 14.2803 4.9926L9.50736 0.219626C9.21447 -0.073267 8.73959 -0.073267 8.4467 0.219626C8.15381 0.51252 8.15381 0.987393 8.4467 1.28029L11.9393 4.77293H0.75C0.335786 4.77293 0 5.10871 0 5.52293C0 5.93714 0.335786 6.27293 0.75 6.27293H11.9393L8.4467 9.76557C8.15381 10.0585 8.15381 10.5333 8.4467 10.8262C8.73959 11.1191 9.21447 11.1191 9.50736 10.8262Z" fill="#152137"/>
                     </svg>
@@ -174,8 +174,8 @@
         <h3 class="information-places-block__main-words">Featured Tour Places</h3>
         <h4 class="information-places-block__sub-words">There are many variations of passages of Lorem ipsum available, but the majority have suffered alteration.</h4>
         <div class="information-places-card-container-wrap">
-            <div class="information-places-card-container">
-                <div class="information-places-card">
+            <div class="information-places-card-container" data-js-places-slider-container>
+                <div class="information-places-card" data-js-places-slider-card>
                     <div class="information-places-card__img-container"><!-- todo: добавь сюда картинку --></div>
                     <h4 class="information-places-card__main-words">Spain Places</h4>
                     <div class="information-places-card-text-container">
@@ -196,7 +196,7 @@
                         <p class="information-places-card-text-container__price-text">$544.00</p>
                     </div>
                 </div>
-                <div class="information-places-card">
+                <div class="information-places-card" data-js-places-slider-card>
                     <div class="information-places-card__img-container"><!-- todo: добавь сюда картинку --></div>
                     <h4 class="information-places-card__main-words">Japan Places</h4>
                     <div class="information-places-card-text-container">
@@ -217,7 +217,7 @@
                         <p class="information-places-card-text-container__price-text">$544.00</p>
                     </div>
                 </div>
-                <div class="information-places-card">
+                <div class="information-places-card" data-js-places-slider-card>
                     <div class="information-places-card__img-container"><!-- todo: добавь сюда картинку --></div>
                     <h4 class="information-places-card__main-words">London Places</h4>
                     <div class="information-places-card-text-container">
@@ -238,7 +238,7 @@
                         <p class="information-places-card-text-container__price-text">$544.00</p>
                     </div>
                 </div>
-                <div class="information-places-card">
+                <div class="information-places-card" data-js-places-slider-card>
                     <div class="information-places-card__img-container"><!-- todo: добавь сюда картинку --></div>
                     <h4 class="information-places-card__main-words">Canada Places</h4>
                     <div class="information-places-card-text-container">
@@ -263,12 +263,12 @@
         </div>
         <div class="information-places-buttons">
             <div class="information-places-buttons__wrap">
-                <button class="information-places-buttons__button-left" type="button">
+                <button class="information-places-buttons__button-left" type="button" data-js-places-slider-button-prev>
                     <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M4.99264 10.8262L0.21967 6.05326C-0.0732231 5.76036 -0.0732231 5.28549 0.21967 4.9926L4.99264 0.219626C5.28553 -0.073267 5.76041 -0.073267 6.0533 0.219626C6.34619 0.51252 6.34619 0.987393 6.0533 1.28029L2.56066 4.77293H13.75C14.1642 4.77293 14.5 5.10871 14.5 5.52293C14.5 5.93714 14.1642 6.27293 13.75 6.27293H2.56066L6.0533 9.76557C6.34619 10.0585 6.34619 10.5333 6.0533 10.8262C5.76041 11.1191 5.28553 11.1191 4.99264 10.8262Z" fill="#152137"/>
                     </svg>
                 </button>
-                <button class="information-places-buttons__button-right" type="button">
+                <button class="information-places-buttons__button-right" type="button" data-js-places-slider-button-next>
                     <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M9.50736 10.8262L14.2803 6.05326C14.5732 5.76036 14.5732 5.28549 14.2803 4.9926L9.50736 0.219626C9.21447 -0.073267 8.73959 -0.073267 8.4467 0.219626C8.15381 0.51252 8.15381 0.987393 8.4467 1.28029L11.9393 4.77293H0.75C0.335786 4.77293 0 5.10871 0 5.52293C0 5.93714 0.335786 6.27293 0.75 6.27293H11.9393L8.4467 9.76557C8.15381 10.0585 8.15381 10.5333 8.4467 10.8262C8.73959 11.1191 9.21447 11.1191 9.50736 10.8262Z" fill="#152137"/>
                     </svg>
@@ -296,12 +296,12 @@
             </div>
             <div class="information-cities-buttons">
                 <div class="information-cities-buttons__wrap">
-                    <button class="information-cities-buttons__button-left" type="button">
+                    <button class="information-cities-buttons__button-left" type="button" data-js-cities-slider-button-prev>
                         <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M4.99264 10.8262L0.21967 6.05326C-0.0732231 5.76036 -0.0732231 5.28549 0.21967 4.9926L4.99264 0.219626C5.28553 -0.073267 5.76041 -0.073267 6.0533 0.219626C6.34619 0.51252 6.34619 0.987393 6.0533 1.28029L2.56066 4.77293H13.75C14.1642 4.77293 14.5 5.10871 14.5 5.52293C14.5 5.93714 14.1642 6.27293 13.75 6.27293H2.56066L6.0533 9.76557C6.34619 10.0585 6.34619 10.5333 6.0533 10.8262C5.76041 11.1191 5.28553 11.1191 4.99264 10.8262Z" fill="#152137"/>
                         </svg>
                     </button>
-                    <button class="information-cities-buttons__button-right" type="button">
+                    <button class="information-cities-buttons__button-right" type="button" data-js-cities-slider-button-next>
                         <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M9.50736 10.8262L14.2803 6.05326C14.5732 5.76036 14.5732 5.28549 14.2803 4.9926L9.50736 0.219626C9.21447 -0.073267 8.73959 -0.073267 8.4467 0.219626C8.15381 0.51252 8.15381 0.987393 8.4467 1.28029L11.9393 4.77293H0.75C0.335786 4.77293 0 5.10871 0 5.52293C0 5.93714 0.335786 6.27293 0.75 6.27293H11.9393L8.4467 9.76557C8.15381 10.0585 8.15381 10.5333 8.4467 10.8262C8.73959 11.1191 9.21447 11.1191 9.50736 10.8262Z" fill="#152137"/>
                         </svg>
@@ -310,8 +310,8 @@
             </div>
         </div>
         <div class="information-cities-card-container-wrap">
-            <div class="information-cities-card-container">
-                <div class="information-cities-card">
+            <div class="information-cities-card-container" data-js-cities-slider-container>
+                <div class="information-cities-card" data-js-cities-slider-card>
                     <div class="information-cities-card-country-container">
                         <p class="information-cities-card-country-container__main-words">Japan</p>
                     </div>
@@ -320,7 +320,7 @@
                         <p class="information-cities-card-text-container__sub-words">10 Popular Places</p>
                     </div>
                 </div>
-                <div class="information-cities-card">
+                <div class="information-cities-card" data-js-cities-slider-card>
                     <div class="information-cities-card-country-container">
                         <p class="information-cities-card-country-container__main-words">Indonesia</p>
                     </div>
@@ -329,7 +329,7 @@
                         <p class="information-cities-card-text-container__sub-words">10 Popular Places</p>
                     </div>
                 </div>
-                <div class="information-cities-card">
+                <div class="information-cities-card" data-js-cities-slider-card>
                     <div class="information-cities-card-country-container">
                         <p class="information-cities-card-country-container__main-words">Barcelona</p>
                     </div>
@@ -351,12 +351,12 @@
             <div class="information-reviews-button-container-right">
                 <div class="information-reviews-buttons">
                     <div class="information-reviews-buttons__wrap">
-                        <button class="information-reviews-buttons__button-left" type="button">
+                        <button class="information-reviews-buttons__button-left" type="button" data-js-reviews-slider-button-prev>
                             <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.99264 10.8262L0.21967 6.05326C-0.0732231 5.76036 -0.0732231 5.28549 0.21967 4.9926L4.99264 0.219626C5.28553 -0.073267 5.76041 -0.073267 6.0533 0.219626C6.34619 0.51252 6.34619 0.987393 6.0533 1.28029L2.56066 4.77293H13.75C14.1642 4.77293 14.5 5.10871 14.5 5.52293C14.5 5.93714 14.1642 6.27293 13.75 6.27293H2.56066L6.0533 9.76557C6.34619 10.0585 6.34619 10.5333 6.0533 10.8262C5.76041 11.1191 5.28553 11.1191 4.99264 10.8262Z" fill="#152137"/>
                             </svg>
                         </button>
-                        <button class="information-reviews-buttons__button-right" type="button">
+                        <button class="information-reviews-buttons__button-right" type="button" data-js-reviews-slider-button-next>
                             <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.50736 10.8262L14.2803 6.05326C14.5732 5.76036 14.5732 5.28549 14.2803 4.9926L9.50736 0.219626C9.21447 -0.073267 8.73959 -0.073267 8.4467 0.219626C8.15381 0.51252 8.15381 0.987393 8.4467 1.28029L11.9393 4.77293H0.75C0.335786 4.77293 0 5.10871 0 5.52293C0 5.93714 0.335786 6.27293 0.75 6.27293H11.9393L8.4467 9.76557C8.15381 10.0585 8.15381 10.5333 8.4467 10.8262C8.73959 11.1191 9.21447 11.1191 9.50736 10.8262Z" fill="#152137"/>
                             </svg>
@@ -366,8 +366,8 @@
             </div>
         </div>
         <div class="information-reviews-card-container-wrap">
-            <div class="information-reviews-card-container">
-                <div class="information-reviews-card">
+            <div class="information-reviews-card-container" data-js-reviews-slider-container>
+                <div class="information-reviews-card" data-js-reviews-slider-card>
                     <div class="information-reviews-card-text-container">
                         <h4 class="information-reviews-card-text-container__main-words">Sayem Ahmed</h4>
                         <h5 class="information-reviews-card-text-container__sub-words">Product designer</h5>
@@ -384,7 +384,7 @@
                     </svg>
                     <p class="information-reviews-card__review-text">Before we define any approach, we need to define the brands' overall goal. We then need to dive.</p>
                 </div>
-                <div class="information-reviews-card">
+                <div class="information-reviews-card" data-js-reviews-slider-card>
                     <div class="information-reviews-card-text-container">
                         <h4 class="information-reviews-card-text-container__main-words">Sayem Ahmed</h4>
                         <h5 class="information-reviews-card-text-container__sub-words">Product designer</h5>
@@ -401,7 +401,7 @@
                     </svg>
                     <p class="information-reviews-card__review-text">Before we define any approach, we need to define the brands' overall goal. We then need to dive.</p>
                 </div>
-                <div class="information-reviews-card">
+                <div class="information-reviews-card" data-js-reviews-slider-card>
                     <div class="information-reviews-card-text-container">
                         <h4 class="information-reviews-card-text-container__main-words">Sayem Ahmed</h4>
                         <h5 class="information-reviews-card-text-container__sub-words">Product designer</h5>
@@ -418,7 +418,7 @@
                     </svg>
                     <p class="information-reviews-card__review-text">Before we define any approach, we need to define the brands' overall goal. We then need to dive.</p>
                 </div>
-                <div class="information-reviews-card">
+                <div class="information-reviews-card" data-js-reviews-slider-card>
                     <div class="information-reviews-card-text-container">
                         <h4 class="information-reviews-card-text-container__main-words">Sayem Ahmed</h4>
                         <h5 class="information-reviews-card-text-container__sub-words">Product designer</h5>
