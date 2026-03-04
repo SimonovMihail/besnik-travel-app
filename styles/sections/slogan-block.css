@@ -55,6 +55,69 @@
     display: none;
 }
 
+.slogan-side-menu-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #F5F6F8;
+    width: 300px;
+    height: 100dvh;
+    z-index: 1000;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    color: var(--text-dark);
+    padding: 20px;
+}
+
+.slogan-side-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.slogan-side-menu__close-and-create-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slogan-side-menu-close-button {
+    font-family: var(--sub-font);
+    padding: 10px;
+    font-size: 14px;
+    background: none;
+    border: solid #777F96 1.5px;
+    border-radius: 4px;
+}
+
+.slogan-side-menu-create-button {
+    font-family: var(--sub-font);
+    padding: 10px;
+    font-size: 14px;
+    background: none;
+    border: solid #777F96 1.5px;
+    border-radius: 4px;
+}
+
+.slogan-side-menu__options-list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.slogan-side-menu__options-item-button {
+    font-family: var(--sub-font);
+    width: 170px;
+    padding: 10px;
+    font-size: 14px;
+    background: none;
+    border: solid #777F96 1.5px;
+    border-radius: 4px;
+}
+
 .slogan-main-block {
     margin-top: 100px;
     display: flex;
