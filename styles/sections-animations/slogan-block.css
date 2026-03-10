@@ -55,8 +55,10 @@
 }
 
 .slogan-search-destination-input:focus {
-    transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out, border 0.2s ease-in-out;
     color: black;
+    outline: none;
+    border-bottom: 1px solid black;
 }
 
 .slogan-search-location-input:hover::placeholder {
@@ -75,8 +77,10 @@
 }
 
 .slogan-search-location-input:focus {
-    transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out, border 0.2s ease-in-out;
     color: black;
+    outline: none;
+    border-bottom: 1px solid black;
 }
 
 .slogan-people-dropdown-button:hover {
