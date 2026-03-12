@@ -92,8 +92,19 @@
     color: black;
 }
 
+.people-dropdown__item-button:hover {
+    background-color: #ececec;
+}
+
 .slogan-down-arrow-icon.is-clicked {
     transform: rotate(180deg);
+}
+
+.slogan-search-location-input-mobile:focus {
+    transition: color 0.2s ease-in-out, border 0.2s ease-in-out;
+    color: black;
+    outline: none;
+    border-bottom: 1px solid black;
 }
 
 .slogan-side-menu-close-button:hover {

@@ -168,13 +168,12 @@
 .slogan-search-location-input {
     border: none;
     width: 100px;
-    padding: 10px 5px;
+    padding: 5px 5px;
     font-family: var(--sub-font);
     color: #AFAEB4;
 }
 
 .slogan-people-dropdown-button {
-    position: relative;
     border: none;
     background: none;
     color: #AFAEB4;
@@ -190,12 +189,15 @@
     border-radius: 4px;
 }
 
+.people-dropdown-wrap {
+    position: absolute;
+    z-index: 2000;
+}
+
 .people-dropdown {
     display: flex;
-    position: absolute;
     flex-direction: column;
     list-style-type: none;
-    left: -10px;
     gap: 5px;
     margin: 0;
     padding: 5px;
@@ -210,12 +212,6 @@
     border-radius: 4px;
     padding: 5px 10px;
     border: none;
-}
-
-
-
-.people-dropdown__item-button:hover {
-    background-color: #ececec;
 }
 
 .slogan-dynamic-field {
@@ -246,7 +242,7 @@
 .slogan-search-location-input-mobile {
     border: none;
     width: 150px;
-    padding: 10px 5px;
+    padding: 5px 5px;
     font-family: var(--sub-font);
     color: #AFAEB4;
 }

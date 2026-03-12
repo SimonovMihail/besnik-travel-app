@@ -1,3 +1,43 @@
+const PEOPLE_FIELD_OPTIONS = ["1 Person", "2 Person", "3 Person", "4 Person", "5 Person"];
+let destinationInputGlobalValue = '';
+let locationInputGlobalValue = '';
+let peopleFieldSelected = "2 Person";
+
+const destinationInput = document.querySelector('[data-js-slogan-search-destination-input]');
+
+destinationInput.addEventListener('input', () => {
+    destinationInputGlobalValue = destinationInput.value;
+});
+
+const locationInput = document.querySelector('[data-js-slogan-search-location-input]');
+
+locationInput.addEventListener('input', () => {
+    locationInputGlobalValue = locationInput.value;
+});
+
+// вспомогательная ф-я для синхронизации контента кнопок people
+const syncPeopleUI = (value) => {
+    peopleFieldSelected = value;
+    const buttons = document.querySelectorAll('[data-js-slogan-people-dropdown-menu-button]');
+
+    buttons.forEach(button => {
+        button.innerText = value;
+    })
+}
+
+// вспомогательная ф-я для генерации контента дропдауна people
+const generateDropdownHTML = (currentValue) => {
+    const items = PEOPLE_FIELD_OPTIONS
+        .filter(option => option !== currentValue)
+        .map(option => `
+            <li class="people-dropdown__item" data-js-people-dropdown-item>
+                <button class="people-dropdown__item-button" type="button" data-js-people-dropdown-item-button>${option}</button>
+            </li>
+        `).join('');
+
+    return `<ul class="people-dropdown" data-js-people-dropdown-item-list>${items}</ul>`;
+}
+
 export function initBurgerButton() {
     const burgerButton = document.querySelector('[data-js-slogan-burger-button]');
 
@@ -100,8 +140,8 @@ export function initSearchStepByStep() {
                     <svg class="slogan-search-bar__divider-mobile" width="1" height="15" viewBox="0 0 1 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="1" height="15" fill="#E5E5E5"></rect>
                     </svg>
-                    <label for="location-input" data-js-slogan-search-location-label-mobile>
-                        <input placeholder="C. Location" class="slogan-search-location-input-mobile" id="location-input" type="text" data-js-slogan-search-location-input-mobile>
+                    <label for="location-input-mobile" data-js-slogan-search-location-label-mobile>
+                        <input placeholder="C. Location" class="slogan-search-location-input-mobile" id="location-input-mobile" type="text" data-js-slogan-search-location-input-mobile>
                     </label>
                 `;
 
@@ -109,11 +149,18 @@ export function initSearchStepByStep() {
 
                 const locationSearchInputMobile = locationSearchWrapMobile.querySelector('[data-js-slogan-search-location-input-mobile]');
 
+                locationSearchInputMobile.value = locationInputGlobalValue;
+
                 requestAnimationFrame(() => {
                     locationSearchWrapMobile.classList.add('is-visible');
                 });
 
                 locationSearchInputMobile.addEventListener('input', function handleLocation() {
+                    if (locationSearchInputMobile.value !== locationInputGlobalValue) {
+                        locationInputGlobalValue = locationSearchInputMobile.value;
+                        locationInput.value = locationSearchInputMobile.value;
+                    }
+
                     if (locationSearchInputMobile.value.trim().length > 0 && !isPeopleCreated) {
                         createPeopleField();
                         isPeopleCreated = true;
@@ -148,9 +195,9 @@ export function initSearchStepByStep() {
         }
     }
 
-    const cleanup = () => { // data-js-slogan-search-people-wrap-mobile
-        const mobilefields = document.querySelectorAll('[data-js-slogan-search-location-wrap-mobile], [data-js-slogan-search-location-wrap-mobile], [data-js-slogan-search-people-wrap-mobile]');
-        mobilefields.forEach(field => field.remove());
+    const cleanup = () => {
+        const mobileFields = document.querySelectorAll('[data-js-slogan-search-location-wrap-mobile], [data-js-slogan-search-location-wrap-mobile], [data-js-slogan-search-people-wrap-mobile]');
+        mobileFields.forEach(field => field.remove());
     }
 
     const handleMediaChange = (e) => {
@@ -163,6 +210,14 @@ export function initSearchStepByStep() {
     destInput.addEventListener('input', handleInput);
 
     handleMediaChange(mediaQuery);
+}
+
+export function initSearchButton() {
+    const searchButton = document.querySelector('[data-js-slogan-search-button]');
+
+    searchButton.addEventListener('click', () => {
+        alert(`ВЫ НАЖАЛИ КНОПКУ, СОДЕРЖИМОЕ ПОЛЕЙ: ${destinationInputGlobalValue}, ${locationInputGlobalValue}, ${peopleFieldSelected}`);
+    })
 }
 
 export function initPeopleDropdownMenu(containerSelector = '[data-js-slogan-people-dropdown-menu]') {
@@ -201,96 +256,34 @@ export function initPeopleDropdownMenu(containerSelector = '[data-js-slogan-peop
             }
 
             const dropdownMenu = document.createElement('div');
-            dropdownMenu.innerHTML = `
-                <ul class="people-dropdown">
-                    <li class="people-dropdown__item">
-                        <button class="people-dropdown__item-button" type="button">1 Person</button>
-                    </li>
-                    <li class="people-dropdown__item">
-                        <button class="people-dropdown__item-button" type="button">3 Person</button>
-                    </li>
-                    <li class="people-dropdown__item">
-                        <button class="people-dropdown__item-button" type="button">4 Person</button>
-                    </li>
-                    <li class="people-dropdown__item">
-                        <button class="people-dropdown__item-button" type="button">5 Person</button>
-                    </li>
-                </ul>
-            `;
+            dropdownMenu.innerHTML = generateDropdownHTML(peopleFieldSelected);
 
-            dropdownMenu.classList.add('people-dropdown-wrap')
-            peopleDropdownButton.classList.add('is-clicked')
-            peopleDropdownArrow.classList.add('is-clicked')
+            dropdownMenu.classList.add('people-dropdown-wrap');
 
-            peopleDropdownButton.appendChild(dropdownMenu);
+            const peopleDropdownButtonCords = peopleDropdownButton.getBoundingClientRect();
+            const top = peopleDropdownButtonCords.bottom + window.scrollY;
+            const left = peopleDropdownButtonCords.left + window.scrollX;
+
+            dropdownMenu.style.top = `${top + 5}px`;
+            dropdownMenu.style.left = `${left - 10}px`;
+
+            peopleDropdownButton.classList.add('is-clicked');
+            peopleDropdownArrow.classList.add('is-clicked');
+
+            document.body.appendChild(dropdownMenu);
             currentMenu = dropdownMenu;
 
-            document.addEventListener('click', closeMenu)
+            dropdownMenu.addEventListener('click', (e) => {
+                const button = e.target.closest('[data-js-people-dropdown-item-button]');
+                if (button) {
+                    syncPeopleUI(button.innerText);
+                    removeMenu();
+                }
+            });
+
+            document.addEventListener('click', closeMenu);
         });
 
         block.dataset.initialized = "true";
     });
 }
-
-// export function initPeopleDropdownMenu() {
-//     const peopleDropdownBlock = document.querySelector('[data-js-slogan-people-dropdown-menu]');
-//
-//     if (!peopleDropdownBlock) return;
-//
-//     const peopleDropdownButton = peopleDropdownBlock.querySelector('[data-js-slogan-people-dropdown-menu-button]');
-//     const peopleDropdownArrow = peopleDropdownBlock.querySelector('[data-js-slogan-people-dropdown-menu-arrow]')
-//
-//     let currentMenu = null;
-//
-//     const closeMenu = (e) => {
-//         if (currentMenu && !currentMenu.contains(e.target) && !peopleDropdownButton.contains(e.target)) {
-//             removeMenu();
-//         }
-//     }
-//
-//     function removeMenu() {
-//         if (currentMenu) {
-//             peopleDropdownButton.classList.remove('is-clicked')
-//             peopleDropdownArrow.classList.remove('is-clicked')
-//             currentMenu.remove();
-//             currentMenu = null;
-//             document.removeEventListener('click', closeMenu)
-//         }
-//     }
-//
-//     peopleDropdownButton.addEventListener('click', (event) => {
-//         event.stopPropagation();
-//
-//         if (currentMenu) {
-//             removeMenu();
-//             return;
-//         }
-//
-//         const dropdownMenu = document.createElement('div');
-//         dropdownMenu.innerHTML = `
-//             <ul class="people-dropdown">
-//                 <li class="people-dropdown__item">
-//                     <button class="people-dropdown__item-button" type="button">1 Person</button>
-//                 </li>
-//                 <li class="people-dropdown__item">
-//                     <button class="people-dropdown__item-button" type="button">3 Person</button>
-//                 </li>
-//                 <li class="people-dropdown__item">
-//                     <button class="people-dropdown__item-button" type="button">4 Person</button>
-//                 </li>
-//                 <li class="people-dropdown__item">
-//                     <button class="people-dropdown__item-button" type="button">5 Person</button>
-//                 </li>
-//             </ul>
-//         `;
-//
-//         dropdownMenu.classList.add('people-dropdown-wrap')
-//         peopleDropdownButton.classList.add('is-clicked')
-//         peopleDropdownArrow.classList.add('is-clicked')
-//
-//         peopleDropdownButton.appendChild(dropdownMenu);
-//         currentMenu = dropdownMenu;
-//
-//         document.addEventListener('click', closeMenu)
-//     })
-// }
