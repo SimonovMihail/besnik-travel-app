@@ -55,6 +55,17 @@
     display: none;
 }
 
+.slogan-dynamic-block {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.2s ease-in;
+}
+
+.slogan-dynamic-block.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .slogan-side-menu-wrap {
     position: fixed;
     top: 0;

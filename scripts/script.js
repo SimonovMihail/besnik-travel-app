@@ -1,19 +1,31 @@
 import { initBurgerButton } from "./sections/slogan-block.js";
 import { initSearchStepByStep } from "./sections/slogan-block.js";
 import { initSearchButton } from "./sections/slogan-block.js";
-import { initPeopleDropdownMenu } from './sections/slogan-block.js'
+import { initPeopleDropdownMenu } from './sections/slogan-block.js';
+import { renderProsCards } from "./sections/information-block.js";
 import { initProsSlider } from "./sections/information-block.js";
+import { renderAboutCards } from "./sections/information-block.js";
 import { initAboutSlider } from "./sections/information-block.js";
+import { renderPlacesCards } from "./sections/information-block.js";
 import { initPlacesSlider } from "./sections/information-block.js";
+import { renderCitiesCards } from "./sections/information-block.js";
 import { initCitiesSlider } from "./sections/information-block.js";
+import { renderReviewsCards } from "./sections/information-block.js";
 import { initReviewsSlider } from "./sections/information-block.js";
+import { initEmailField } from "./sections/bottom-info-block.js";
 
 initBurgerButton();
 initSearchStepByStep();
 initSearchButton();
 initPeopleDropdownMenu();
+renderProsCards();
 initProsSlider();
+renderAboutCards();
 initAboutSlider();
+renderPlacesCards();
 initPlacesSlider();
+renderCitiesCards();
 initCitiesSlider();
+renderReviewsCards();
 initReviewsSlider();
+initEmailField();

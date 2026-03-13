@@ -43,6 +43,28 @@
     display: flex;
     scrollbar-width: none; /* чтобы скролл не было видно */
     gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.information-about-card-container-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 1150px;
+    border-radius: 8px;
+    padding: 0;
+}
+
+.information-about-card-container-wrap::after { /* Он нам и будет давать тень и круглую рамку. */
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    background: linear-gradient(to right, transparent 98%, #F5F6F8 100%), linear-gradient(to left, transparent 98%, #F5F6F8 100%);
+    z-index: 5;
+    pointer-events: none;
 }
 
 .information-about-card-container-wrap::-webkit-scrollbar {
@@ -64,6 +86,16 @@
     width: 150px;
     height: 150px;
     top: 255px;
+}
+
+.information-about-card__img-loading-wrap {
+    width: 540px;
+    height: 290px;
+    background-image: linear-gradient(135deg,
+        rgb(13 9 45 / 40%) 0%,
+        rgb(15 11 44 / 0%) 94%,
+        rgb(15 11 44 / 10%) 100%
+    );
 }
 
 .information-about-card__img {

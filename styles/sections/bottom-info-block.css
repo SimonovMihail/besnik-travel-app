@@ -36,14 +36,11 @@
     grid-template-columns: 145px 145px;
 }
 
-.bottom-info-social-media-container {
+.bottom-info-social-media-container__link {
+    color: var(--text-bright);
     display: flex;
     align-items: center;
     gap: 7px;
-}
-
-.bottom-info-social-media-container__link {
-    color: var(--text-bright);
     font-size: 16px;
     text-decoration: none;
 }

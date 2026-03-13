@@ -39,8 +39,9 @@ const generateDropdownHTML = (currentValue) => {
 }
 
 export function initBurgerButton() {
-    const burgerButton = document.querySelector('[data-js-slogan-burger-button]');
+    const mediaQuery = window.matchMedia('(max-width: 750px)');
 
+    const burgerButton = document.querySelector('[data-js-slogan-burger-button]');
     if (!burgerButton) return;
 
     let currentMenu = null;
@@ -51,49 +52,52 @@ export function initBurgerButton() {
         }
     }
 
-    function removeMenu() {
-        currentMenu.remove();
-        currentMenu = null;
-        document.removeEventListener('click', closeMenu);
+    const removeMenu = () => {
+        if (currentMenu) {
+            currentMenu.remove();
+            currentMenu = null;
+            document.removeEventListener('click', closeMenu);
+        }
     }
 
-    burgerButton.addEventListener('click', (event) => {
-        event.stopPropagation();
-
+    const createMenu = () => {
         if (currentMenu) {
             removeMenu();
             return;
         }
 
         const sideMenuWrap = document.createElement('div');
-        sideMenuWrap.classList.add('slogan-side-menu-wrap');
+        sideMenuWrap.classList.add('slogan-dynamic-block', 'slogan-side-menu-wrap');
+        sideMenuWrap.setAttribute('data-js-slogan-side-menu-wrap', '');
         sideMenuWrap.innerHTML = `
-            <aside class="slogan-side-menu">
-                <div class="slogan-side-menu__close-and-create-container">
-                    <button type="button" class="slogan-side-menu-close-button" data-js-slogan-close-button>close</button>
-                    <button type="button" class="slogan-side-menu-create-button">Create account</button>
-                </div>
-                <ul class="slogan-side-menu__options-list">
-                    <li class="slogan-side-menu__options-item">
-                        <button type="button" class="slogan-side-menu__options-item-button">find a trip</button>
-                    </li>
-                    <li class="slogan-side-menu__options-item">
-                        <button type="button" class="slogan-side-menu__options-item-button">destinations</button>
-                    </li>
-                    <li class="slogan-side-menu__options-item">
-                        <button type="button" class="slogan-side-menu__options-item-button">why besnik</button>
-                    </li>
-                    <li class="slogan-side-menu__options-item">
-                        <button type="button" class="slogan-side-menu__options-item-button">contact</button>
-                    </li>
-                </ul>
-            </aside>
-        `;
-
-        // burgerButton.appendChild(sideMenuWrap); урок: всякие выпадающее меню, сайдбары и прочие вещи с position: absolute
-        // привыязывай к body!
+        <aside class="slogan-side-menu">
+            <div class="slogan-side-menu__close-and-create-container">
+                <button type="button" class="slogan-side-menu-close-button" data-js-slogan-close-button>close</button>
+                <button type="button" class="slogan-side-menu-create-button">Create account</button>
+            </div>
+            <ul class="slogan-side-menu__options-list">
+                <li class="slogan-side-menu__options-item">
+                    <button type="button" class="slogan-side-menu__options-item-button">find a trip</button>
+                </li>
+                <li class="slogan-side-menu__options-item">
+                    <button type="button" class="slogan-side-menu__options-item-button">destinations</button>
+                </li>
+                <li class="slogan-side-menu__options-item">
+                    <button type="button" class="slogan-side-menu__options-item-button">why besnik</button>
+                </li>
+                <li class="slogan-side-menu__options-item">
+                    <button type="button" class="slogan-side-menu__options-item-button">contact</button>
+                </li>
+            </ul>
+        </aside>
+    `;
+        
         document.body.appendChild(sideMenuWrap)
         currentMenu = sideMenuWrap;
+
+        requestAnimationFrame(() => {
+            sideMenuWrap.classList.add('is-visible');
+        })
 
         const closeBtn = sideMenuWrap.querySelector('[data-js-slogan-close-button]');
         closeBtn.addEventListener('click', () => {
@@ -101,7 +105,29 @@ export function initBurgerButton() {
         });
 
         document.addEventListener('click', closeMenu);
+    }
+
+    burgerButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+
+        if (!mediaQuery.matches) return;
+
+        if (currentMenu) {
+            removeMenu();
+        } else {
+            createMenu();
+        }
     });
+
+    const handleMediaChange = (e) => {
+        if (!e.matches) {
+            removeMenu();
+        }
+    }
+
+    mediaQuery.addEventListener('change', handleMediaChange);
+
+    handleMediaChange(mediaQuery);
 }
 
 export function initSearchStepByStep() {
@@ -216,7 +242,11 @@ export function initSearchButton() {
     const searchButton = document.querySelector('[data-js-slogan-search-button]');
 
     searchButton.addEventListener('click', () => {
-        alert(`ВЫ НАЖАЛИ КНОПКУ, СОДЕРЖИМОЕ ПОЛЕЙ: ${destinationInputGlobalValue}, ${locationInputGlobalValue}, ${peopleFieldSelected}`);
+        if (destinationInputGlobalValue === '' || locationInputGlobalValue === '') {
+            alert("ЗАПОЛНИТЕ НЕДОСТАЮЩИЕ ПОЛЯ!!!");
+        } else {
+            alert(`ВЫ НАЖАЛИ КНОПКУ, СОДЕРЖИМОЕ ПОЛЕЙ: ${destinationInputGlobalValue}, ${locationInputGlobalValue}, ${peopleFieldSelected}`);
+        }
     })
 }
 

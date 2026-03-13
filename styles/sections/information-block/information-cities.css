@@ -63,6 +63,28 @@
     align-items: center;
     justify-content: space-between;
     gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+.information-cities-card-container-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 1192px;
+    border-radius: 8px;
+    padding: 0;
+}
+
+.information-cities-card-container-wrap::after { /* Он нам и будет давать тень и круглую рамку. */
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    background: linear-gradient(to right, transparent 98%, #F5F6F8 100%), linear-gradient(to left, transparent 98%, #F5F6F8 100%);
+    z-index: 5;
+    pointer-events: none;
 }
 
 .information-cities-card-container-wrap::-webkit-scrollbar {

@@ -73,6 +73,31 @@
     gap: 30px;
 }
 
+.information-reviews-card-container-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 1258px;
+    border-radius: 8px;
+    padding: 0;
+}
+
+.information-reviews-card-container-wrap::after { /* Он нам и будет давать тень и круглую рамку. */
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    background: linear-gradient(to right, transparent 98%, #F5F6F8 100%), linear-gradient(to left, transparent 98%, #F5F6F8 100%);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.information-reviews-card-container {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
 .information-reviews-card-container-wrap::-webkit-scrollbar {
     display: none; /* чтобы скролл не было видно */
 }
@@ -103,7 +128,9 @@
     font-weight: 300;
 }
 
-.information-reviews-card__rating {
+.information-reviews-card__rating-stars-container {
+    display: flex;
+    gap: 5px;
     margin-top: 10px;
 }
 
