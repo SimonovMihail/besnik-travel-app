@@ -3,18 +3,18 @@
     "id": 1,
     "title": "Select Destination",
     "text": "At first choose the place you wanted to go",
-    "img": "cards_info_pseudoback/information-pros-cards/img/img1.png"
+    "img": "./cards_info_pseudoback/information-pros-cards/img/img1.png"
   },
   {
     "id": 2,
     "title": "Book a Trip",
     "text": "Book your tip form our exclusive offers",
-    "img": "cards_info_pseudoback/information-pros-cards/img/img2.png"
+    "img": "./cards_info_pseudoback/information-pros-cards/img/img2.png"
   },
   {
     "id": 3,
     "title": "Take your flight",
     "text": "Take your flight to selected date and joy",
-    "img": "cards_info_pseudoback/information-pros-cards/img/img3.png"
+    "img": "./cards_info_pseudoback/information-pros-cards/img/img3.png"
   }
 ]

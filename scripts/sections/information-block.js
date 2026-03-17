@@ -16,7 +16,7 @@ export async function renderProsCards() {
     if (!prosCardContainer) return;
 
     try {
-        const response = await fetch('/cards_info_pseudoback/information-pros-cards/data.json');
+        const response = await fetch('./cards_info_pseudoback/information-pros-cards/data.json');
 
         if (!response.ok) throw new Error('Ошибка загрузки карточек блока information-pros');
 
@@ -78,7 +78,7 @@ export async function renderAboutCards() {
     if (!aboutCardContainer) return;
 
     try {
-        const response = await fetch('/cards_info_pseudoback/information-about-cards/data.json');
+        const response = await fetch('./cards_info_pseudoback/information-about-cards/data.json');
 
         if (!response.ok) throw new Error('Ошибка загрузки карточек блока information-about-cards');
 
@@ -153,7 +153,7 @@ export async function renderPlacesCards() {
     if (!placesCardContainer) return;
 
     try {
-        const response = await fetch('/cards_info_pseudoback/information-places-cards/data.json');
+        const response = await fetch('./cards_info_pseudoback/information-places-cards/data.json');
 
         if (!response.ok) throw new Error('Ошибка загрузки карточек блока information-places-cards');
 
@@ -216,7 +216,7 @@ export async function renderCitiesCards() {
     if (!citiesCardContainer) return;
 
     try {
-        const response = await fetch('/cards_info_pseudoback/information-cities-cards/data.json');
+        const response = await fetch('./cards_info_pseudoback/information-cities-cards/data.json');
 
         if (!response.ok) throw new Error('Ошибка загрузки карточек блока information-cities-cards');
 
@@ -289,7 +289,7 @@ export async function renderReviewsCards() {
     if (!reviewsCardContainer) return;
 
     try {
-        const response = await fetch('/cards_info_pseudoback/information-reviews-cards/data.json');
+        const response = await fetch('./cards_info_pseudoback/information-reviews-cards/data.json');
 
         if (!response.ok) throw new Error('Ошибка загрузки карточек блока information-cities-cards');
 
